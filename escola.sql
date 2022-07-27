@@ -91,3 +91,17 @@ VALUES
 
 ('Excel',9,4,4),
 ('Excel',10,4,4);
+
+-- Mostrar nome dos alunos e telefones
+
+SELECT nome, fone FROM tab_alunos;
+
+-- Mostrar nome dos alunos e email do gemail
+
+SELECT nome, email FROM tab_alunos WHERE email LIKE '%@gmail.com';
+-- no exemplo a cima o sinal de % serve como um caractere coringa exibe  tudo que tenha @gmail.com no final
+-- %@gmail% este exemplo exibe tudo que está antes e depois de @gmail.com
+
+-- Mostrar nome dos professores e salários
+
+SELECT nome, salario FROM tab_professores;

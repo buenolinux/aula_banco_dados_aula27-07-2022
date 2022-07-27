@@ -108,7 +108,10 @@ SELECT nome, salario FROM tab_professores;
 -- Mostrar nome dos professores e salários maiores que 2400
 SELECT nome, salario FROM tab_professores WHERE salario > 2400
 
--- Mostrar nome sos proferrosres e salarios entre 1200 e 2400
+-- Mostrar nome sos proferrosres e salarios entre 1200 e 2400 com teste lógico
 
 
-SELECT nome, salario FROM tab_professores WHERE salario >= 1200 and salario <= 2400
+SELECT nome, salario FROM tab_professores WHERE salario >= 1200 and salario <= 2400;
+
+-- Mostrar nome sos proferrosres e salarios entre 1200 e 2400 com o comando BETWENN
+SELECT nome, salario FROM tab_professores WHERE salario BETWEEN 1200 and   2400;

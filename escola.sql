@@ -115,3 +115,6 @@ SELECT nome, salario FROM tab_professores WHERE salario >= 1200 and salario <= 2
 
 -- Mostrar nome sos proferrosres e salarios entre 1200 e 2400 com o comando BETWENN
 SELECT nome, salario FROM tab_professores WHERE salario BETWEEN 1200 and   2400;
+-- Mostrar número da sala e capacidade onde houver equipamentos MAC
+
+SELECT numero, capacidade FROM tab_salas WHERE equipamento ='MAC';

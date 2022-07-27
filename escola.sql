@@ -73,8 +73,10 @@ VALUES
 (32,20,'MAC');
 
 SELECT * FROM tab_alunos
+SELECT * FROM tab_turmas
 SELECT * FROM tab_professores
 SELECT * FROM tab_salas
+
 
 INSERT INTO tab_turmas(nome, id_aluno,id_professor,id_sala)
 VALUES
@@ -139,3 +141,20 @@ SELECT tab_alunos.id_aluno as 'Id dos alunos',
 select * from tab_turmas
 
 /* http://www.bosontreinamentos.com.br/bancos-de-dados/10-comandos-essenciais-em-sql-com-exemplos-de-uso/ */
+
+/*
+Mostrar o nome do professor e dos alunos da turma de reses 
+Use rótulos para todas as colunas
+*/
+SELECT  tab_professores.nome AS 'Nome do professor ',
+		tab_alunos.nome AS 'Nome do aluno', 
+		tab_turmas.nome AS 'Curso'
+FROM tab_professores
+
+INNER JOIN tab_turmas
+ON tab_turmas.id_professor = tab_professores.id_professor
+
+INNER JOIN tab_alunos
+ON tab_turmas.id_aluno = tab_alunos.id_aluno
+
+WHERE tab_turmas.nome = 'Redes'

@@ -177,8 +177,8 @@ SELECT tab_alunos.nome As 'Nome dos alunos',
 	   tab_turmas.nome As 'Nome do Curso'
 	   
 FROM tab_alunos
-INNER JOIN tab_turmas
-on tab_alunos.id_aluno = tab_turmas.id_aluno
-INNER JOIN tab_professores
-on tab_professores.id_professor = tab_turmas.id_professor
+	INNER JOIN tab_turmas
+	on tab_alunos.id_aluno = tab_turmas.id_aluno
+	INNER JOIN tab_professores
+	on tab_professores.id_professor = tab_turmas.id_professor
 WHERE tab_professores.nome = 'Fábio'

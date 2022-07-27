@@ -158,3 +158,13 @@ INNER JOIN tab_alunos
 ON tab_turmas.id_aluno = tab_alunos.id_aluno
 
 WHERE tab_turmas.nome = 'Redes'
+
+/*
+Mostrar os nomes dos alunos que estão na turma de SQL e C#
+Use rótulos para todas as colunas
+*/
+
+SELECT tab_alunos.nome, tab_turmas.nome FROM tab_alunos
+INNER JOIN tab_turmas
+on tab_alunos.id_aluno = tab_turmas.id_aluno
+WHERE tab_turmas.nome = 'SQL' OR tab_turmas.nome = 'C#' 

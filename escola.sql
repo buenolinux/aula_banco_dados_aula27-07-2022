@@ -105,3 +105,5 @@ SELECT nome, email FROM tab_alunos WHERE email LIKE '%@gmail.com';
 -- Mostrar nome dos professores e salários
 
 SELECT nome, salario FROM tab_professores;
+-- Mostrar nome dos professores e salários maiores que 2400
+SELECT nome, salario FROM tab_professores WHERE salario > 2400

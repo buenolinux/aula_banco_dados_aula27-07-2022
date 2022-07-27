@@ -117,4 +117,21 @@ SELECT nome, salario FROM tab_professores WHERE salario >= 1200 and salario <= 2
 SELECT nome, salario FROM tab_professores WHERE salario BETWEEN 1200 and   2400;
 -- Mostrar número da sala e capacidade onde houver equipamentos MAC
 
-SELECT numero, capacidade FROM tab_salas WHERE equipamento ='MAC';
+SELECT numero, capacidade  FROM tab_salas WHERE equipamento ='MAC';
+-- Mostrar número da sala e  capacidade onde não houver equipamentos MAC
+-- Faça a consulta de duas formas diferentes
+
+SELECT numero, capacidade, equipamento FROM tab_salas WHERE equipamento !='MAC';
+
+SELECT numero, capacidade FROM tab_salas WHERE  equipamento <>  'MAC'  ;
+SELECT numero, capacidade FROM tab_salas WHERE  not equipamento =  'MAC'  ;
+
+-- Mostrar os ids e os nomes dos alunos que estão na turma de SQL
+-- Use rótulos para todas as colunas
+SELECT tab_alunos.id_aluno, tab_alunos.nome,tab_turmas.nome  
+	FROM  tab_alunos 
+	INNER JOIN tab_turmas 
+	ON tab_alunos.id_aluno = tab_turmas.id_aluno 
+	WHERE tab_turmas.nome = 'SQL';
+
+select * from tab_turmas

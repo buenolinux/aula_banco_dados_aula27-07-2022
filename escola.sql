@@ -135,3 +135,5 @@ SELECT tab_alunos.id_aluno, tab_alunos.nome,tab_turmas.nome
 	WHERE tab_turmas.nome = 'SQL';
 
 select * from tab_turmas
+
+/* http://www.bosontreinamentos.com.br/bancos-de-dados/10-comandos-essenciais-em-sql-com-exemplos-de-uso/ */

@@ -168,3 +168,17 @@ SELECT tab_alunos.nome, tab_turmas.nome FROM tab_alunos
 INNER JOIN tab_turmas
 on tab_alunos.id_aluno = tab_turmas.id_aluno
 WHERE tab_turmas.nome = 'SQL' OR tab_turmas.nome = 'C#' 
+/*
+Mostra os nomes dos alunos que estão com o professor Fábio e o nome do curos
+use rótulos para todas as colunas
+*/
+
+SELECT tab_alunos.nome As 'Nome dos alunos',
+	   tab_turmas.nome As 'Nome do Curso'
+	   
+FROM tab_alunos
+INNER JOIN tab_turmas
+on tab_alunos.id_aluno = tab_turmas.id_aluno
+INNER JOIN tab_professores
+on tab_professores.id_professor = tab_turmas.id_professor
+WHERE tab_professores.nome = 'Fábio'

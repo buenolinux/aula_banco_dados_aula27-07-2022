@@ -174,6 +174,7 @@ use rótulos para todas as colunas
 */
 
 SELECT tab_alunos.nome As 'Nome dos alunos',
+	   tab_professores.nome  As 'Nome do do proferror',
 	   tab_turmas.nome As 'Nome do Curso'
 	   
 FROM tab_alunos

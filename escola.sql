@@ -7,3 +7,19 @@ CREATE TABLE tab_alunos(
 	fone  VARCHAR(15) NOT NULL,
 	foto  VARCHAR(50) NOT NULL
 );
+
+CREATE TABLE tab_professores(
+	id_professor INT NOT NULL PRIMARY KEY IDENTITY,
+	nome VARCHAR(50) NOT NULL,
+	email VARCHAR(50)NOT NULL,
+	fone VARCHAR(15)NOT NULL,
+	foto VARCHAR(50)NOT NULL,
+	salario DECIMAL(10,2)NOT NULL
+);
+
+CREATE TABLE tab_salas(
+	id_sala INT NOT NULL PRIMARY KEY IDENTITY,
+	numero INT NOT NULL,
+	capacidade INT NOT NULL,
+	equipamento VARCHAR(3)NOT NULL
+);

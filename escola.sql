@@ -128,7 +128,9 @@ SELECT numero, capacidade FROM tab_salas WHERE  not equipamento =  'MAC'  ;
 
 -- Mostrar os ids e os nomes dos alunos que estão na turma de SQL
 -- Use rótulos para todas as colunas
-SELECT tab_alunos.id_aluno, tab_alunos.nome,tab_turmas.nome  
+SELECT tab_alunos.id_aluno as 'Id dos alunos',
+	   tab_alunos.nome as Nome,
+	   tab_turmas.nome as Turmas 
 	FROM  tab_alunos 
 	INNER JOIN tab_turmas 
 	ON tab_alunos.id_aluno = tab_turmas.id_aluno 

@@ -44,3 +44,50 @@ CREATE TABLE tab_turmas(
 	REFERENCES tab_salas(id_sala)
 
 );
+
+INSERT INTO tab_alunos(nome,email,fone,foto)
+VALUES
+('João da Silva','joao@gmail.com','(11) 91111-1111','joao.jpg'),
+('Maria Machadão','machadao@outlook.com','(11) 92222-2222','maria.jpg'),
+('Chales','chales@uol.com','(11) 93333-3333','charles.jpg'),
+('Manoel','manoel@gmail.com','(11) 94444-4444','manoel.jpg'),
+('Danilo','danilo@bol.com','(11) 95555-5555','danilo.jpg'),
+('Fatima','fatima@gmail.com','(11) 96666-6666','fatima.jpg'),
+('Simone','simone@outlook.com','(11) 97777-7777','simone.jpg'),
+('Tomas','tomas@bol.com','(11) 98888-8888','tomas.jpg'),
+('Tereza','tereza@uol.com','(11) 99999-9999','tereza.jpg'),
+('Beto','beto@gmail.com','(11) 91010-1010','beto.jpg');
+
+INSERT INTO tab_professores(nome, email, fone, foto, salario)
+VALUES
+('Fábio','fabio@gmail.com','(11) 90000-0000','fabio.jpg',1500.00),
+('Rafael','rafael@gmail.com','(11) 92222-2222','rafael.jpg',2500.00),
+('Alexandre','alex@gmail.com','(11) 93333-3333','alexandre.jpg',2500.00),
+('Anésio','anesio@gmail.com','(11) 94444-4444','anesio.jpg',2380.00);
+
+INSERT INTO tab_salas(numero, capacidade, equipamento)
+VALUES
+(2,12,'WIN'),
+(24,27,'WIN'),
+(30,20,'WIN'),
+(32,20,'MAC');
+
+SELECT * FROM tab_alunos
+SELECT * FROM tab_professores
+SELECT * FROM tab_salas
+
+INSERT INTO tab_turmas(nome, id_aluno,id_professor,id_sala)
+VALUES
+('SQL',1,1,1),
+('SQL',2,1,1),
+('SQL',3,1,1),
+
+('C#',4,2,2),
+('C#',5,2,2),
+('C#',6,2,2),
+
+('Redes',7,3,3),
+('Redes',8,3,3),
+
+('Excel',9,4,4),
+('Excel',10,4,4);
